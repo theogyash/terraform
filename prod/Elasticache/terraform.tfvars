@@ -1,0 +1,15 @@
+cache_name                  = "xyz"
+node_type                   = "cache.t3.micro"
+engine_version              = "8.1.0"
+num_cache_nodes             = 1
+parameter_group_name        = "default.valkey8"
+subnet_ids                  = ["subnet-1234567890abcdef0"]
+security_group_ids          = ["sg-0123456789abcdef0"]
+description                 = "xyz"
+multi_az_enabled            = false
+automatic_failover_enabled  = false
+at_rest_encryption_enabled  = true
+transit_encryption_enabled  = false
+environment                 = "dev"
+service                     = "app1"
+organization                = "my-org"
