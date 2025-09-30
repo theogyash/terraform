@@ -9,10 +9,10 @@ module "ecs_tg" {
   protocol                = var.tg_protocol
   target_type             = var.tg_target_type
   vpc_id                  = var.vpc_id
-  # host_based_routing_rule = var.host_based_routing_rule
-  # listener_arn            = var.tg_listener_arn
-  # priority                = var.tg_rule_priority
-  # host_headers            = var.host_headers
+  host_based_routing_rule = var.host_based_routing_rule
+  listener_arn            = var.tg_listener_arn
+  priority                = var.tg_rule_priority
+  host_headers            = var.host_headers
   service                 = var.service
   environment             = var.environment
   organization            = var.organization

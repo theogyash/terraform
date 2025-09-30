@@ -1,7 +1,7 @@
 environment          = "stg"
 deployment_type      = "stg"
 organization         = "adsyntrix"
-service              = "adsyntrix-server"
+service              = "stg-adsyntrix-server"
 log_retention_period = 7 ## days
 cluster_id           = "prod-adsyntrix-ecs-cluster-01"
 desired_count        = 0
@@ -20,11 +20,11 @@ image_id           = "latest"
 
 ## tg variables
 create_tg               = true
-# host_based_routing_rule = true
+host_based_routing_rule = true
 tg_protocol             = "HTTP"
 tg_target_type          = "ip"
-# tg_listener_arn         = "arn:aws:elasticloadbalancing:ap-south-1:977098999002:targetgroup/prod-code-guard-server-tg-01/3264e82d2e1686a4"
-# tg_rule_priority        = 2
-# host_headers            = ["staging.adsyntrix.com"]
-# lb_arn_suffix           = "app/prod-adsyntrix-ecs-alb-public/b3ed37d9b231779e"
-# path                    = "/ping"
+tg_listener_arn         = "arn:aws:elasticloadbalancing:ap-south-1:977098999002:targetgroup/stg-stg-adsyntrix-server-tg-01/44da62be860ca06c"
+tg_rule_priority        = 2
+host_headers            = ["staging.adsyntrix.com"]
+lb_arn_suffix           = "app/prod-adsyntrix-ecs-alb-public/b3ed37d9b231779e"
+path                    = "/ping"
